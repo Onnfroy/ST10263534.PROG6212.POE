@@ -19,5 +19,14 @@
                 <Button Name="btnSubmitClaim" Content="Submit Claim" Width="150" Click="SubmitClaim_Click" Margin="10,5,0,0"/>
             </StackPanel>
         </GroupBox>
+        
+        <!-- Upload Supporting Documents Section -->
+        <GroupBox Header="Upload Supporting Documents" Margin="20,170,20,0" Height="100" VerticalAlignment="Top">
+            <StackPanel>
+                <Button Name="btnUploadDocument" Content="Upload Document" Width="150" Click="UploadDocument_Click" />
+                <TextBlock Name="lblDocumentStatus" Text="No document uploaded yet." FontStyle="Italic"/>
+            </StackPanel>
+        </GroupBox>
+        
     </Grid>
 </Window>
