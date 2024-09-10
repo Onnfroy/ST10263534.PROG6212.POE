@@ -27,6 +27,15 @@
                 <TextBlock Name="lblDocumentStatus" Text="No document uploaded yet." FontStyle="Italic"/>
             </StackPanel>
         </GroupBox>
-        
+
+        <!-- Track Claim Status Section -->
+        <GroupBox Header="Track Claim Status" Margin="20,290,20,0" Height="100" VerticalAlignment="Top">
+            <StackPanel>
+                <TextBlock Text="Claim ID:"/>
+                <TextBox Name="txtClaimID" Width="200"/>
+                <Button Name="btnCheckStatus" Content="Check Status" Width="150" Click="CheckStatus_Click" />
+                <TextBlock Name="lblClaimStatus" Text="Claim status will be displayed here." FontStyle="Italic"/>
+            </StackPanel>
+        </GroupBox>
     </Grid>
 </Window>
