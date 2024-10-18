@@ -1,54 +1,45 @@
-﻿<Window x:Class="CMCSPrototype.SubmitClaimsPage"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CMCSPrototype"
-        mc:Ignorable="d"
-        Title="Submit Claims" Height="722" Width="800" Background="#1E1E1E">
+﻿<Page x:Class="CMCSPrototype.SubmitClaimsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Submit Claims" Background="#1E1E1E">
 
+    <!-- Main Content Area for Claim Submission -->
     <Grid Margin="20">
-        <!-- Title of the Page -->
-        <TextBlock FontSize="26" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" 
+        <TextBlock FontSize="26" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"
                    Margin="0,10,0,20" Text="Submit Your Claim" Foreground="#007ACC"/>
 
-        <!-- Submit Claim Section -->
+        <!-- Submit Claim Form -->
         <StackPanel Orientation="Vertical" Margin="0,50,0,0">
-            <!-- Section Header -->
-            <Label Content="Submit a Claim" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" 
+            <Label Content="Submit a Claim" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left"
                    Margin="10,0,0,10" Foreground="#007ACC"/>
 
             <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0,0,10">
-                <!-- Lecturer ID Input -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
                     <TextBlock Text="Lecturer ID:" Width="150" VerticalAlignment="Center" Foreground="White"/>
                     <TextBox Name="txtLecturerID" Width="150" Margin="5,0" Background="#D3D3D3" Foreground="Black"/>
                 </StackPanel>
 
-                <!-- Hours Worked Input -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
                     <TextBlock Text="Enter Hours Worked:" Width="150" VerticalAlignment="Center" Foreground="White"/>
                     <TextBox Name="txtHoursWorked" Width="150" Margin="5,0" Background="#D3D3D3" Foreground="Black"/>
                 </StackPanel>
 
-                <!-- Hourly Rate Input -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
                     <TextBlock Text="Enter Hourly Rate:" Width="150" VerticalAlignment="Center" Foreground="White"/>
                     <TextBox Name="txtHourlyRate" Width="150" Margin="5,0" Background="#D3D3D3" Foreground="Black"/>
                 </StackPanel>
 
-                <!-- Upload Document Section -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
                     <TextBlock Text="Upload Supporting Document:" Width="180" VerticalAlignment="Center" Foreground="White"/>
-                    <Button Name="btnUploadDocument" Content="Choose File" Width="150" 
+                    <Button Name="btnUploadDocument" Content="Choose File" Width="150"
                             Click="UploadDocument_Click" Background="#007ACC" Foreground="White"/>
+                    <TextBlock Name="lblUploadStatus" Text="No document uploaded yet." Foreground="White" Margin="10,0,0,0"/>
                 </StackPanel>
 
-                <!-- Submit Claim Button -->
-                <Button Name="btnSubmitClaim" Content="Submit Claim" Width="150" Margin="0,10,0,0" 
+                <Button Name="btnSubmitClaim" Content="Submit Claim" Width="150" Margin="0,10,0,0"
                         HorizontalAlignment="Left" Click="SubmitClaim_Click"
                         Background="#007ACC" Foreground="White"/>
             </StackPanel>
         </StackPanel>
     </Grid>
-</Window>
+</Page>

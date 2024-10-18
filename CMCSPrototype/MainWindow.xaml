@@ -1,0 +1,17 @@
+﻿<Window x:Class="CMCSPrototype.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Contract Monthly Claim System" Height="500" Width="900" Background="#1E1E1E">
+
+    <DockPanel>
+        <!-- Navbar at the top -->
+        <Menu DockPanel.Dock="Top" Background="#333333" Foreground="White">
+            <MenuItem Header="Home" Click="Home_Click"/>
+            <MenuItem Header="Submit Claims" Click="SubmitClaims_Click"/>
+            <MenuItem Header="Verify Claims" Click="VerifyClaims_Click"/>
+        </Menu>
+
+        <!-- Frame to display different pages (Home, Submit Claims, Verify Claims) -->
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
+    </DockPanel>
+</Window>
