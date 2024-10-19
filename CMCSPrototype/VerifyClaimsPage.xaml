@@ -45,6 +45,7 @@
                 <DataGridTextColumn Header="Hours Worked" Binding="{Binding HoursWorked}" Width="*" />
                 <DataGridTextColumn Header="Hourly Rate" Binding="{Binding HourlyRate}" Width="*" />
                 <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*" />
+                <DataGridTextColumn Header="Comments" Binding="{Binding Comments}" Width="*" />
 
                 <DataGridTemplateColumn Header="Document Path" Width="*">
                     <DataGridTemplateColumn.CellTemplate>

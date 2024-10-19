@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace CMCSPrototype
 {
@@ -7,26 +9,36 @@ namespace CMCSPrototype
         public MainWindow()
         {
             InitializeComponent();
-            // Set the default page (home) when the application starts
-            MainFrame.Content = new HomePage();
         }
 
-        // Navigate to HomePage when 'Home' is clicked
+        // Event handler for Home menu item
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = new HomePage();
+            // Navigate to the HomePage within the MainFrame
+            MainFrame.Navigate(new HomePage());
         }
 
-        // Navigate to SubmitClaimsPage when 'Submit Claims' is clicked
+        // Event handler for Submit Claims menu item
         private void SubmitClaims_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = new SubmitClaimsPage();
+            // Navigate to the SubmitClaimsPage within the MainFrame
+            MainFrame.Navigate(new SubmitClaimsPage());
         }
 
-        // Navigate to VerifyClaimsPage when 'Verify Claims' is clicked
+        // Event handler for Verify Claims menu item
         private void VerifyClaims_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = new VerifyClaimsPage();
+            // Navigate to the VerifyClaimsPage within the MainFrame
+            MainFrame.Navigate(new VerifyClaimsPage());
+        }
+
+        // Event handler for Check Claims menu item
+        private void CheckClaims_Click(object sender, RoutedEventArgs e)
+        {
+            // Replace this with the actual lecturer ID you want to use
+            int lecturerID = 1; // Replace with dynamic value if needed
+            // Navigate to the CheckClaimsPage and pass the LecturerID within the MainFrame
+            MainFrame.Navigate(new CheckClaimsPage(lecturerID));
         }
     }
 }

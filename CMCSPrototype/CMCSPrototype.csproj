@@ -74,12 +74,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CheckClaimsPage.xaml.cs">
+      <DependentUpon>CheckClaimsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SubmitClaimsPage.xaml.cs">
       <DependentUpon>SubmitClaimsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="VerifyClaimsPage.xaml.cs">
       <DependentUpon>VerifyClaimsPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="CheckClaimsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

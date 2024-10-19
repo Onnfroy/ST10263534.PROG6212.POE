@@ -41,7 +41,7 @@ namespace CMCSPrototype
         {
             try
             {
-                string query = "SELECT ClaimID, LecturerID, HoursWorked, HourlyRate, Status, DocumentPath FROM Claims WHERE Status = 'Pending'";
+                string query = "SELECT ClaimID, LecturerID, HoursWorked, HourlyRate, Status, DocumentPath, Comments FROM Claims WHERE Status = 'Pending'";
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, sqlConnection);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);

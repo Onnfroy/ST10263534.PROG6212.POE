@@ -9,6 +9,7 @@
             <MenuItem Header="Home" Click="Home_Click"/>
             <MenuItem Header="Submit Claims" Click="SubmitClaims_Click"/>
             <MenuItem Header="Verify Claims" Click="VerifyClaims_Click"/>
+            <MenuItem Header="Check Claims" Click="CheckClaims_Click"/>
         </Menu>
 
         <!-- Frame to display different pages (Home, Submit Claims, Verify Claims) -->
