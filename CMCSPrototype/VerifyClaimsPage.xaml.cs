@@ -37,23 +37,23 @@ namespace CMCSPrototype
         }
 
         // Load pending claims from the database
-        private void LoadClaims()
+        public DataTable LoadClaims()
         {
+            DataTable dataTable = new DataTable();
             try
             {
-                string query = "SELECT ClaimID, LecturerID, HoursWorked, HourlyRate, Status, DocumentPath, Comments FROM Claims WHERE Status = 'Pending'";
+                string query = "SELECT ClaimID, LecturerID, HoursWorked, HourlyRate, Status, DocumentPath FROM Claims WHERE Status = 'Pending'";
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, sqlConnection);
-                DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
-
-                // Bind the data to the DataGrid
-                claimsDataGrid.ItemsSource = dataTable.DefaultView;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading claims: " + ex.Message);
             }
-        }
+
+            return dataTable;  // Return the DataTable
+        }   
+   
 
         // Approve claim event handler
         private void ApproveClaim_Click(object sender, RoutedEventArgs e)

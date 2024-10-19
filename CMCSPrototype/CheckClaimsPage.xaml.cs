@@ -37,7 +37,7 @@ namespace CMCSPrototype
         }
 
         // Load the claims for the current lecturer
-        private void LoadClaims()
+        public void LoadClaims()
         {
             try
             {
